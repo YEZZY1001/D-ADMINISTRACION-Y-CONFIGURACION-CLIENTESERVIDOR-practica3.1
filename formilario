@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+             }
+
+        video {
+             position: fixed;
+             top: 50%;
+             left: 50%;
+             width: 100vw;
+             height: 100vh;
+             object-fit: cover;
+             transform: translate(-50%, -50%);
+              z-index: -1;
+             }
+
+        .container {
+             background-color: rgba(255, 255, 255, 0.8);
+             padding: 20px;
+             border-radius: 8px;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+             width: 400px;
+             max-width: 80%;
+             z-index: 1;
+             }
+
+        .pregunta label {
+             font-size: 100%;
+             color: rgb(0, 0, 0);
+           
+             }
+
+        @font-face {
+             font-family: letra1;
+             src: url(font/Race\ Sport.ttf);
+    
+            }
+
+        .letra1 {
+
+             font-family: letra1;
+             font-size: 20px;
+              color: rgb(116, 42, 165);
+             }
+
+             input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 20px; 
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: rgb(94, 6, 236);
+            color: white;
+            border: none;
+            border-radius: 20px; 
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section id="sect1" class="sect">
+        <video src="img/fondo1.mp4" autoplay="true" muted="true" loop="true" poster="https://carontestudio.com/img/contacto.jpg"></video>
+        </section>
+
+        <div class="container">
+            <h2 class="letra1">Formulario de contacto</h2>
+            <div class="pregunta">
+                <form action="envio.php" method="POST">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br>
+                    
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required><br>
+                    
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" required><br>
+                    
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="5" required></textarea><br>
+                    
+                    <input type="submit" value="Enviar" name="enviar">
+                </form>
+            </div>
+        </div>
+</body>
+</html>
